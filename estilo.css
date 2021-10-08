@@ -1,0 +1,144 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html {
+    height: 100%;
+  }
+  
+  h1{
+      font-size: 3.4rem;
+      font-family: Arial, Helvetica, sans-serif;
+}
+  h5{
+      font-size: 1.2rem;
+      font-family: monospace;
+      background-color: white;
+      font-family:'Ephesis', cursive;
+}
+
+  body {
+    font-family: 'Ephesis', cursive;
+    font-size: 1.4rem;
+    min-height: 100%;
+    background: url(https://www.xtrafondos.com/wallpapers/asus-rog-logo-republic-of-gamers-5083.jpg);
+    background-size: 100vw 100vh;
+  }
+  
+  .grid-container > * {
+    box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 4px;
+    padding: 10px;
+    text-align: center;
+  }
+  .header {
+    grid-area: header;
+    color: #fdfdfd;
+    background-color: #0c0b0b;
+    background-size: 100vw 100vh;
+      background-image: url(imagenes/fondo3.jpg);
+    align-items: center;
+      display: flex;
+      justify-content: center;
+  }
+  
+  .navbar {
+    grid-area: navbar;
+    background-color: #f1486d;
+  }
+  
+  .sidebar {
+    grid-area: sidebar;
+    background-color: white;
+}
+
+.main {
+  grid-area: main;
+  background-color: white;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #f1486d;
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "header"  100px
+    "navbar"  50px
+    "main"    auto
+    "sidebar" 100px
+    "footer"  100px;
+}
+
+@media (min-width: 600px) {
+  .grid-container {
+    grid-template:
+      "header  header" 100px
+      "navbar  navbar" 50px
+      "sidebar main"   auto
+      "footer  footer" 100px /
+      200px    auto;
+  }
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template:
+      "header  header header"  100px
+      "navbar navbar navbar" 50px
+      "main  main   sidebar" auto
+      "footer  footer footer"  100px /
+      200px    auto   200px;
+  }
+}
+ul,ol{
+	list-style:none;
+	background: rgb(248, 150, 150);
+	}
+	
+	.nav li a{
+		color:black;
+    background-color:white;
+		text-decoration:none;
+		padding:5.5px 38px;
+		display:block;
+		align-items: center;
+		display: flex;
+		justify-content: center;
+		height: 35px;
+		border: solid 2px #fdfdfd;
+	}
+.nav li a.active{
+	  background-color:black;
+		color:white;
+		font-weight:bolder;
+		font-size: 13pt;
+}
+.nav li a:hover{
+	background-color:#f76868;
+	color:#000000;
+	font-size: 14pt;
+}
+.nav > li{
+	float:left;
+}
+.nav li ul{
+	display:none;
+	position:absolute;
+	min-width:140px;
+}
+.nav li:hover > ul{
+	display:block;		
+}
+.nav li ul li{
+	position:relative;
+}
+	.nav li ul li ul{
+	right:-130px;
+	top:0px;
+}
